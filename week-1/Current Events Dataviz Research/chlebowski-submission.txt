@@ -1,0 +1,7 @@
+Event(s): Olympics 
+Publication Date: Aug 10, 2024 (X.com)
+URL: https://x.com/DeepaliKank/status/1822146348516356279
+Title: Olympic Gender Gap Narrows as Women's Participation Surges
+Chart Author: Deepali Kank
+
+This particular data visualization represents the Olympic gender participation gap over the last century (1896-2016). I think this visualization is a great way to show how that gap has been bridge over the years. The authors choice to represent the data in this way allows for the viewer to immediately make an assumption without the need for metrics. My first reaction was "surprised" since it seems like women's participation has only recently spiked. I think the colors chosen by the author are also a great way to contrast the male and female participation. If I were to add more to this data visualization, it would be the number of participants (M or F) shown when hovering over the "bars."
