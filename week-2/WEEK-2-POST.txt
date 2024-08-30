@@ -1,0 +1,18 @@
+Hi everyone,
+
+Per the Professors request to send everything in one message so that Discord is less clogged, here is my work for Week 2.
+
+``` Find 3 Datasets ```
+
+My 3 Viz Datasets (Kaggle.com has some neat csv files):
+1) Cost of Living by Country - https://vizhub.com/jacobchlebowski/cost-of-living-by-country-dataset
+2) Pokémon Base Stats - https://vizhub.com/jacobchlebowski/pokemon-base-stats-dataset
+3) Global Population Growth 2024 - https://vizhub.com/jacobchlebowski/global-population-growth-2024
+
+Note: I've also added a scrollbar to all of my programs for optimal viewing experience
+
+``` Analyze Current Events Viz Data ```
+
+
+
+``` Ask a Question ```

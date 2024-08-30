@@ -1,0 +1,8 @@
+Cost of Living Index by Country:
+https://www.kaggle.com/datasets/myrios/cost-of-living-index-by-country-by-number-2024
+
+Pokémon Base Stats Dataset:
+https://www.kaggle.com/datasets/crinklybrain2003/pokmon-base-stats-dataset
+
+Global Population Growth 2024:
+https://www.kaggle.com/datasets/haseebindata/global-population-growth-2024
