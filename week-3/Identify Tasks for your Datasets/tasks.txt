@@ -1,0 +1,26 @@
+(these are generic, please put the specific attributes from your data into the sentences)
+
+
+Dataset 1: https://vizhub.com/jacobchlebowski/cost-of-living-by-country-dataset
+Questions:
+-
+-
+-
+-
+-
+
+Dataset 2: https://vizhub.com/jacobchlebowski/week-3-worlds-most-polluted-cities
+Questions:
+-
+-
+-
+-
+-
+
+Dataset 3: https://vizhub.com/jacobchlebowski/pokemon-base-stats-dataset
+Questions:
+-
+-
+-
+-
+-
