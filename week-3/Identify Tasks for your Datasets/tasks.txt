@@ -1,26 +1,25 @@
-(these are generic, please put the specific attributes from your data into the sentences)
-
+*Since some of these datasets are presented in JSON format, it allows me to think a bit more creatively in terms of what I want the end-user to experience
 
 Dataset 1: https://vizhub.com/jacobchlebowski/cost-of-living-by-country-dataset
-Questions:
--
--
--
--
--
+Tasks:
+-I want to discover the "severity" of range of cost of living plus rent index
+-I want to compare two countries' cost of living via the "cost of living plus rent index" attribute
+-I want to record a rating for each country that I would live in
+-I want to search for a specific country by the "country" name attribute
+-I want to summarize all countries in the dataset via a bubble chart
 
 Dataset 2: https://vizhub.com/jacobchlebowski/week-3-worlds-most-polluted-cities
-Questions:
--
--
--
--
--
+Tasks:
+-I want to summarize DYNAMIC AQI data from all cities from the dataset via a DYNAMIC bubble chart
+-I want to search specific cities (lookup) by name or by AQI
+-I want to annotate my thoughts on a city
+-I want to record pictures of cities and link them to the cities on the chart
+-I want to compare two cities based on the AQI
 
 Dataset 3: https://vizhub.com/jacobchlebowski/pokemon-base-stats-dataset
-Questions:
--
--
--
--
--
+Tasks:
+-I want to summarize all pokemon in the dataset via a scatter plot matrix (4 quadrants: speed and offensiveness)
+-I want to search (lookup) the pokemon that have a speed of 150+, among other attributes
+-I want to derive a new pokemon by combining two existing ones (mean of each attribute)
+-I want to record a new pokemon with all new attributes (catch rate, species, type, etc.)
+-I want to identify a single pokemon on a scatter plot

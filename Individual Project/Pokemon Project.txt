@@ -1,0 +1,5 @@
+-I want to visualize all pokemon in the dataset via a scatter plot matrix (4 quadrants: speed and offensiveness)
+-I want to search (lookup) the pokemon that have a speed of 150+, among other attributes
+-I want to derive a new pokemon by combining two existing ones
+-I want to record a new pokemon with all new attributes (catch rate, species, type, etc.)
+-I want to identify a single pokemon on a scatter plot
