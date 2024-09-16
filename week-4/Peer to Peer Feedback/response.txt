@@ -1,0 +1,13 @@
+Hi Jack,
+
+Awesome portfolio. Right off the bat my initial thoughts are that your vizzes (repository) are very organized and complete.
+
+- Your text placement for the solar system assignment is great. I actually had some trouble with aligning my text to the circles, but yours are spaced pretty well
+- Like you mentioned on the solar system assignment, the scaling could probably be a bit better since California and Michigan aren't that far off from each other in terms of radius, however, your viz still delivers the appropriate message
+- Yeah, I do agree with your decision on the solar system radii. Your decision was probably the best one to go with. I was also having some trouble with my text alignment as well
+- Loved how you added both the name and population, I was actually trying to figure out how to add multiple texts like you did, so thank you!
+- Yup I like the NBA dataset. I think more data like that can really give you more freedom for how you might want to pursue a final project, especially if it's with this dataset
+- The COVID-19 dataset is definitely still relevant, could be cool to utilize it for a final project, but I think the NBA dataset might give you more freedom with what you could do (visually at least)
+- Awesome stuff with the python script. Interesting way to parse through, but it definitely worked!
+- Overall, I think this NBA dataset might be really cool to utilize for your final project, especially since you've put in so much time into it already
+- A radar chart might be a good way to encapsulate a players' stats. Maybe you could create a visualization that allows the user to select a player, and then the radar chart shows the stats. I know I'm thinking about doing something similar to my Pokémon  dataset
