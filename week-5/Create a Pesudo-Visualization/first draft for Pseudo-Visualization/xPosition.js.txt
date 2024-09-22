@@ -1,0 +1,25 @@
+import { scaleLinear, axisBottom } from 'd3';
+
+export const xPosition = (
+  selection,
+  { data, width, height },
+) => {
+  // Scales for X and Y axes
+  const xScale = scaleLinear()
+    .domain([-100, 100]) // Offense/Defense balance from -100 to +100
+    .range([0, width]);
+
+  selection
+    .selectAll('circle')
+    .data(data)
+    .join('circle')
+    .attr('cx', (d) => xScale(d.speed))
+    .attr('cy', height / 2)
+    .attr('r', 5);
+
+  // Add X-axis
+  selection
+    .append('g')
+    .attr('transform', `translate(0, ${height})`)
+    .call(axisBottom(xScale));
+};

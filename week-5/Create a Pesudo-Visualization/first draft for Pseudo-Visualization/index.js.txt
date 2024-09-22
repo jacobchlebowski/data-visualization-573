@@ -1,0 +1,63 @@
+import { select } from 'd3';
+import { hue } from './hue'; // Import your updated hue.js
+import { xScale, yScale, createAxes } from './graph'; // Import scales and axes functions
+
+const width = 500;
+const height = 500;
+const margin = { top: 40, right: 40, bottom: 40, left: 40 };
+
+// Pokémon data (parsed from your CSV)
+const data = [
+  {
+    name: 'Bulbasaur',
+    speed: 45,
+    attack: 49,
+    defense: 49,
+    type: 'Grass Poison',
+  },
+  {
+    name: 'Charmander',
+    speed: 65,
+    attack: 52,
+    defense: 43,
+    type: 'Fire',
+  },
+  {
+    name: 'Squirtle',
+    speed: 43,
+    attack: 48,
+    defense: 65,
+    type: 'Water',
+  },
+  {
+    name: 'Test',
+    speed: 0,
+    attack: 0,
+    defense: 0,
+    type: 'Fire',
+  },
+  // Add more Pokémon data...
+];
+
+export const main = (container) => {
+  select(container)
+    .selectAll('svg') // Select existing SVGs in the container
+    .data([null]) // Use a dummy data array for join
+    .join('svg') // Create a new SVG if none exists
+    .attr('width', width + margin.left + margin.right)
+    .attr('height', height + margin.top + margin.bottom)
+    .append('g')
+    .attr(
+      'transform',
+      `translate(${margin.left},${margin.top})`,
+    )
+    .each(function () {
+      const svg = select(this); // Reference to the current SVG group
+
+      // Create axes
+      createAxes(svg);
+
+      // Delegate the plotting of circles to the hue function
+      hue(svg, { data, xScale, yScale });
+    });
+};

@@ -1,0 +1,9 @@
+export const size = (selection, { data, height }) => {
+  selection
+    .selectAll('circle')
+    .data(data)
+    .join('circle')
+    .attr('cx', (d) => d * 70 + 60)
+    .attr('cy', height / 2)
+    .attr('r', (d) => Math.sqrt(d * 200) + 1);
+};

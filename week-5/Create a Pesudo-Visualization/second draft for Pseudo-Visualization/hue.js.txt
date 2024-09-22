@@ -1,0 +1,20 @@
+import { select } from 'd3';
+
+export const hue = (
+  selection,
+  { data, height, xScale, yScale },
+) => {
+  selection
+    .selectAll('circle')
+    .data(data)
+    .join('circle')
+    .attr('cx', (d) => xScale(d.attack - d.defense)) // Use xScale to position based on attack - defense
+    .attr('cy', (d) => yScale(d.speed)) // Use yScale to position based on speed
+    .attr('r', 5)
+    .attr('fill', (d) => {
+      if (d.type.includes('Water')) return 'blue'; // Assign blue for Water types
+      if (d.type.includes('Fire')) return 'red'; // Assign red for Fire types
+      if (d.type.includes('Grass')) return 'green'; // Assign green for Grass types
+      return 'gray'; // Default color for other types
+    });
+};

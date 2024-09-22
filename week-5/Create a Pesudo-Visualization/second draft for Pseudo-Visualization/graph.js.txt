@@ -1,0 +1,44 @@
+import { scaleLinear, axisBottom, axisLeft } from 'd3';
+
+const width = 500;
+const height = 500;
+
+// Scales for X and Y axes
+export const xScale = scaleLinear()
+  .domain([-100, 100]) // Offense/Defense balance from -100 to +100
+  .range([0, width]);
+
+export const yScale = scaleLinear()
+  .domain([-100, 100]) // Speed from -100 to +100
+  .range([height, 0]);
+
+export const createAxes = (svg) => {
+  // Add X axis (Offense/Defense)
+  svg
+    .append('g')
+    .attr('transform', `translate(0, ${height / 2})`)
+    .call(axisBottom(xScale));
+
+  // Add Y axis (Speed)
+  svg
+    .append('g')
+    .attr('transform', `translate(${width / 2}, 0)`)
+    .call(axisLeft(yScale));
+
+  // Add gridlines to separate quadrants visually
+  svg
+    .append('line')
+    .attr('x1', xScale(0))
+    .attr('x2', xScale(0))
+    .attr('y1', 0)
+    .attr('y2', height)
+    .attr('stroke', 'black');
+
+  svg
+    .append('line')
+    .attr('x1', 0)
+    .attr('x2', width)
+    .attr('y1', yScale(0))
+    .attr('y2', yScale(0))
+    .attr('stroke', 'black');
+};

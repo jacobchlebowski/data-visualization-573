@@ -1,0 +1,1 @@
+In this assignment, I focused less on how I was going to calculate the visualization of data rather than what it would look like. This digital iteration is an improvement from my hand-drawn preliminary sketches. I include more color, shapes, and even consider opacity if any data overlaps (especially since I have such a large dataset of Pokémon).

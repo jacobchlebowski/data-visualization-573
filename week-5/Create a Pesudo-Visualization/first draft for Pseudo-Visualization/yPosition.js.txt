@@ -1,0 +1,14 @@
+import { scaleLinear, axisLeft } from 'd3';
+
+export const yPosition = (selection, { data, height }) => {
+  // Scale for Y axis
+  const yScale = scaleLinear()
+    .domain([-100, 100]) // Speed from -100 to +100
+    .range([height, 0]);
+
+  // Add Y-axis
+  selection
+    .append('g')
+    .attr('transform', `translate(${0}, 0)`) // Position at the left edge
+    .call(axisLeft(yScale));
+};

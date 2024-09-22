@@ -1,0 +1,14 @@
+Hi everyone,
+Here is my work for Week 5. Any new ideas or comments on my iterated sketches would be great. I mostly utilized identity channels to create a more sophisticated version of what I already have. Thanks!
+```
+Iterate Your Sketches
+```
+Attached to this post.
+
+In this assignment, I focused less on how I was going to calculate the visualization of data and more of what it would look like (and how the data should be represented). This digital iteration is an improvement from my hand-drawn preliminary sketches. I include more color, shapes, and even consider opacity if any data overlaps (especially since I have such a large dataset of Pokémon).
+```
+Create a Pseudo-Visualization
+```
+Pseudo-Visualization Pokemon Scatterplot - https://vizhub.com/jacobchlebowski/week-5-pseudo-visualization-pokemon-scatterplot
+
+Here is the first actual visualization of my Pokemon scatterplot. I got rid of the length, shape, and xPosition, and yPosition for now, but started with getting the initial scatterplot area with the pieces of data on their respective quadrants (and hues). I utilized a "scaleLinear" module from d3 to help scale the scatterplot. Lastly, I created "graph.js" which helps me create my scatterplot with both X and Y positioning (I just preferred to have it in one file). Next iteration, I will focus a bit more on point size based on HP, and making the graph a bit nicer. I only used a few hues for now, so I will need to add the rest for the Pokemon types. I will also look into making each point "interactive," but I'm not sure yet. Furthermore, I haven't actually implemented the real dataset yet, so that will also be for the next iteration.
