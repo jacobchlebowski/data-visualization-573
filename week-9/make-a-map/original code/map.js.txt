@@ -1,0 +1,42 @@
+import {
+  geoNaturalEarth1,
+  // geoOrthographic,
+  geoPath,
+  geoGraticule,
+} from 'd3';
+
+const projection = geoNaturalEarth1();
+// const projection = geoOrthographic();
+const path = geoPath(projection);
+const graticule = geoGraticule();
+
+export const map = (selection, { data }) => {
+  selection
+    .selectAll('path.graticule')
+    .data([null])
+    .join('path')
+    .attr('class', 'graticule')
+    .attr('d', path(graticule()))
+    .attr('fill', 'none')
+    .attr('stroke', '#BBB')
+    .attr('stroke-width', 0.5);
+
+  selection
+    .selectAll('path.outline')
+    .data([null])
+    .join('path')
+    .attr('class', 'outline')
+    .attr('d', path(graticule.outline()))
+    .attr('fill', 'none')
+    .attr('stroke', 'black')
+    .attr('stroke-width', 2);
+
+  selection
+    .selectAll('path.country')
+    .data(data.features)
+    .join('path')
+    .attr('d', path)
+    .attr('class', 'country')
+    .attr('stroke', 'white')
+    .attr('stroke-width', 0.5);
+};

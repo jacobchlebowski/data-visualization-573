@@ -1,0 +1,14 @@
+Hi everyone,
+Here is my work for Week 9.
+```
+Make a Map
+```
+Map a Map - https://vizhub.com/jacobchlebowski/make-a-map
+
+For this assignment, I decided to turn this into a spinning globe (yup, I tried this out before watching the spinning globe video, oops) on Earth's axis (23.5 degrees). I tried to implement a light/dark side of the Earth, but it was a far bit too challenging. I did however mess with the timer and rotation of the Earth to prevent flickering as well as only drawing the latitude/longitude outlines only once (at beginning) to prevent more flickering. Wasn't exactly the final product I thought I'd come up with, but it's actually looks pretty neat! and it's very smooth. I think after watching the Spinning Globe video, there's definitely some things I could've cleaned up or have done a better job with, but it was a cool learning experience.
+```
+Project Momentum & Proposal Revisions
+```
+LINK
+
+POST

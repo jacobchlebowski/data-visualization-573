@@ -1,0 +1,35 @@
+// This function only updates the dynamic elements (countries)
+export const map = (selection, { data, path }) => {
+  selection
+    .selectAll('path.country')
+    .data(data.features)
+    .join('path')
+    .attr('d', path)
+    .attr('class', 'country')
+    .attr('fill', 'lightgreen')
+    .attr('stroke', 'white')
+    .attr('stroke-width', 0.5);
+};
+
+// This function draws static elements (graticule and outline) only once
+export const drawStaticElements = (selection, { path, graticule }) => {
+  selection
+    .selectAll('path.graticule')
+    .data([null])
+    .join('path')
+    .attr('class', 'graticule')
+    .attr('d', path(graticule()))
+    .attr('fill', 'none')
+    .attr('stroke', '#BBB')
+    .attr('stroke-width', 0.5);
+
+  selection
+    .selectAll('path.outline')
+    .data([null])
+    .join('path')
+    .attr('class', 'outline')
+    .attr('d', path(graticule.outline()))
+    .attr('fill', 'none')
+    .attr('stroke', 'black')
+    .attr('stroke-width', 2);
+};

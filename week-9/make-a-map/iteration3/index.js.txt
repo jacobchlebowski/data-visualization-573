@@ -1,0 +1,74 @@
+import { select, geoOrthographic, geoPath, geoGraticule, timer } from 'd3';
+import topojson from 'topojson-client';
+import { map, drawStaticElements } from './map';
+
+const worldAtlasURL =
+  'https://unpkg.com/visionscarto-world-atlas@0.1.0/world/110m.json';
+
+export const main = (container, { state, setState }) => {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
+  const svg = select(container)
+    .selectAll('svg')
+    .data([null])
+    .join('svg')
+    .attr('width', width)
+    .attr('height', height);
+
+  const projection = geoOrthographic()
+    .scale(300)
+    .translate([width / 2, height / 2])
+    .rotate([0, -23.5]); // Earth tilt of 23.5 degrees
+
+  const path = geoPath(projection);
+  const graticule = geoGraticule();
+
+  // Draw static elements (outline and graticule) once
+  drawStaticElements(svg, { path, graticule });
+
+  // Function to update rotation
+  const rotateEarth = () => {
+    const rotationSpeed = 0.05; // Adjust speed if necessary
+    projection.rotate([projection.rotate()[0] + rotationSpeed, -23.5]);
+
+    // Only update the countries during rotation, not the outline or graticule
+    svg.call(map, {
+      data: state.data,
+      path,
+    });
+  };
+
+  // Start rotating only after data has loaded
+  const startRotation = () => {
+    timer(() => {
+      rotateEarth();
+    });
+  };
+
+  if (state.data && state.data !== 'LOADING') {
+    svg.call(map, {
+      data: state.data,
+      path,
+    });
+    startRotation(); // Start rotating after the map is drawn
+  }
+
+  if (state.data === undefined) {
+    setState((state) => ({
+      ...state,
+      data: 'LOADING',
+    }));
+
+    // Fetch world data
+    fetch(worldAtlasURL)
+      .then((response) => response.json())
+      .then((topoJSONData) => {
+        const data = topojson.feature(topoJSONData, 'countries');
+        setState((state) => ({
+          ...state,
+          data,
+        }));
+      });
+  }
+};

@@ -1,0 +1,33 @@
+import { geoPath, geoGraticule } from 'd3';
+
+export const map = (selection, { data, path, graticule }) => {
+  selection
+    .selectAll('path.graticule')
+    .data([null])
+    .join('path')
+    .attr('class', 'graticule')
+    .attr('d', path(graticule()))
+    .attr('fill', 'none')
+    .attr('stroke', '#BBB')
+    .attr('stroke-width', 0.5);
+
+  selection
+    .selectAll('path.outline')
+    .data([null])
+    .join('path')
+    .attr('class', 'outline')
+    .attr('d', path(graticule.outline()))
+    .attr('fill', 'none')
+    .attr('stroke', 'black')
+    .attr('stroke-width', 2);
+
+  selection
+    .selectAll('path.country')
+    .data(data.features)
+    .join('path')
+    .attr('d', path)
+    .attr('class', 'country')
+    .attr('fill', 'lightgreen')
+    .attr('stroke', 'white')
+    .attr('stroke-width', 0.5);
+};
