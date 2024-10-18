@@ -9,6 +9,7 @@ For this assignment, I decided to turn this into a spinning globe (yup, I tried 
 ```
 Project Momentum & Proposal Revisions
 ```
-LINK
+Data Visualization Project - https://vizhub.com/jacobchlebowski/data-visualization-project
 
-POST
+Successfully implemented the project and the csv to show the all the Pokemon plot points.
+Added a "Milestone Progress" within the readme to show the progress that's been made so far.

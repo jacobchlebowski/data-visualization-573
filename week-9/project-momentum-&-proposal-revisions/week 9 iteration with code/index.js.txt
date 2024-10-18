@@ -1,0 +1,97 @@
+import { select } from 'd3';
+import { hue } from './hue-and-size';
+import { xScale, yScale, createAxes } from './graph';
+
+const width = 500;
+const height = 500;
+const margin = {
+  top: 40,
+  right: 40,
+  bottom: 40,
+  left: 150,
+};
+
+// Pokémon data (parsed from your CSV)
+const data = [
+  {
+    name: 'Bulbasaur',
+    speed: 150,
+    attack: 30,
+    defense: 10,
+    HP: 200,
+    type: 'Grass Poison',
+  },
+  {
+    name: 'Charmander',
+    speed: 100,
+    attack: 52,
+    defense: 43,
+    HP: 150,
+    type: 'Fire',
+  },
+  {
+    name: 'Squirtle',
+    speed: 43,
+    attack: 48,
+    defense: 65,
+    HP: 90,
+    type: 'Water',
+  },
+  {
+    name: 'Test',
+    speed: 0,
+    attack: 0,
+    defense: 0,
+    HP: 50,
+    type: 'Fire',
+  },
+  {
+    name: 'Test',
+    speed: 43,
+    attack: 48,
+    defense: 63,
+    HP: 100,
+    type: 'Water',
+  },
+  {
+    name: 'Test',
+    speed: 120,
+    attack: 80,
+    defense: 0,
+    HP: 100,
+    type: 'Fire',
+  },
+
+  {
+    name: 'Test',
+    speed: 120,
+    attack: 75,
+    defense: 0,
+    HP: 200,
+    type: 'Grass',
+  },
+  // Add more Pokémon data...
+];
+
+export const main = (container) => {
+  select(container)
+    .selectAll('svg')
+    .data([null])
+    .join('svg') // Create a new SVG if none exists
+    .attr('width', width + margin.left + margin.right)
+    .attr('height', height + margin.top + margin.bottom)
+    .append('g')
+    .attr(
+      'transform',
+      `translate(${margin.left},${margin.top})`,
+    )
+    .each(function () {
+      const svg = select(this);
+
+      // create axes
+      createAxes(svg);
+
+      //circles and sizes
+      hue(svg, { data, xScale, yScale });
+    });
+};
