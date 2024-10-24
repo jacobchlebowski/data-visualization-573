@@ -1,0 +1,47 @@
+import { select } from 'd3';
+import { hue } from './hue-and-size';
+import { xScale, yScale, createAxes } from './graph';
+//IMPORT POKEMON DATA
+import originalData from './data.csv';
+
+const width = 500;
+const height = 500;
+const margin = {
+  top: 40,
+  right: 40,
+  bottom: 40,
+  left: 150,
+};
+
+//FORMAT DATA FROM THE CSV
+const data = originalData.map((d) => ({
+  name: d.Name,
+  type: d.Type,
+  speed: +d.Speed,
+  attack: +d.Attack,
+  defense: +d.Defense,
+  HP: +d.HP,
+}));
+
+export const main = (container) => {
+  select(container)
+    .selectAll('svg')
+    .data([null])
+    .join('svg') // Create a new SVG if none exists
+    .attr('width', width + margin.left + margin.right)
+    .attr('height', height + margin.top + margin.bottom)
+    .append('g')
+    .attr(
+      'transform',
+      `translate(${margin.left},${margin.top})`,
+    )
+    .each(function () {
+      const svg = select(this);
+
+      // create axes
+      createAxes(svg);
+
+      //circles and sizes
+      hue(svg, { data, xScale, yScale });
+    });
+};

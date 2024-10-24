@@ -1,0 +1,74 @@
+import { scaleLinear, axisBottom, axisLeft } from 'd3';
+
+const width = 500;
+const height = 500;
+const margin = { top: 40, right: 40, bottom: 40, left: 40 };
+
+// scales for X and Y axes
+export const xScale = scaleLinear()
+  .domain([0, 200]) //speed slowest=0 fastest=200
+  .range([0, width]);
+
+export const yScale = scaleLinear()
+  .domain([-100, 100]) // Balance from -200 (defensive) to +200 (offensive)
+  .range([height, 0]);
+
+//create the axes
+export const createAxes = (svg) => {
+  const centeredX = width / 2;
+  const centeredY = height / 2;
+
+  // BACKGROUND RECT
+  svg
+    .append('rect')
+    .attr('x', 0)
+    .attr('y', 0)
+    .attr('width', width)
+    .attr('height', height)
+    .attr('fill', '#B5B5B5')
+    .attr('opacity', 0.5); // Adjust opacity as needed
+
+  //CREATE AXIS .. move them to the center of the canvas
+  svg
+    .append('g')
+    .attr('transform', `translate(0, ${centeredY})`) // Center X axis
+    .call(axisBottom(xScale));
+
+  svg
+    .append('g')
+    .attr('transform', `translate(${centeredX}, 0)`) // Center Y axis
+    .call(axisLeft(yScale));
+
+  // Add X and Y labels
+  svg
+    .append('text')
+    .attr('x', centeredX + width / 2 - margin.right + 65)
+    .attr('y', centeredY)
+    .style('text-anchor', 'middle')
+    .style('font-weight', 'bold')
+    .text('Fast');
+
+  svg
+    .append('text')
+    .attr('x', centeredX - width / 2 + margin.left - 65)
+    .attr('y', centeredY)
+    .style('text-anchor', 'middle')
+    .style('font-weight', 'bold')
+    .text('Slow');
+
+  svg
+    .append('text')
+    .attr('x', centeredX)
+    .attr('y', margin.top - 50)
+    .style('text-anchor', 'middle')
+    .style('font-weight', 'bold')
+    .text('Offensive');
+
+  svg
+    .append('text')
+    .attr('x', centeredX)
+    .attr('y', height - margin.bottom + 70)
+    .style('text-anchor', 'middle')
+    .style('font-weight', 'bold')
+    .text('Defensive');
+};
