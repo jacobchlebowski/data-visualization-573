@@ -171,7 +171,7 @@ Some thoughts or concerns I have about the project:
   ![plot points not aligning](https://github.com/jacobchlebowski/data-visualization-573/blob/main/FINAL%20PROJECT/images/plot%20points%20not%20aligning.jpg?raw=true)
 - Fortunately, I was able to resolve the issue by styling
   within the SVG to center the scatterplot, and ultimately
-  align the points correclty.
+  align the points correctly.
   ![week 10 plot points aligning](https://github.com/jacobchlebowski/data-visualization-573/blob/main/FINAL%20PROJECT/images/week%2010%20plot%20points%20aligning.jpg?raw=true)
 - While it doesn't seem like it, much progress has been made
   for visualizing these different types of Pokemon in a
