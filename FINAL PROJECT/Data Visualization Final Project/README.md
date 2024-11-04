@@ -209,3 +209,10 @@ Some thoughts or concerns I have about the project:
   it's a bit of DOM and event handling to send information
   from the csv to the front end.
   ![week 11 progress](https://github.com/jacobchlebowski/data-visualization-573/blob/main/FINAL%20PROJECT/images/week%2011%20completion.jpg?raw=true)
+- Next week, I hope to fix the legend first, and then start
+  on something unique. Perhaps the mouse follower I was
+  talking about. Another issue I would really like to focus
+  on is the hot reloading since that's a bit funky. Finally,
+  I'd like to see if I can make this more dynamic. Not sure
+  what I want to do for that yet, but I'll brainstorm this
+  week and see what I might be able to come up with.

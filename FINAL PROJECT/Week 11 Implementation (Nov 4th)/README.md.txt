@@ -4,6 +4,7 @@
 
 - [Week 9](https://vizhub.com/jacobchlebowski/data-visualization-project-week-9)
 - [Week 10](https://vizhub.com/jacobchlebowski/data-visualization-project-week-10)
+- [Week 11](https://vizhub.com/jacobchlebowski/data-visualization-project-week-11)
 
 ## Data
 
@@ -185,3 +186,33 @@ Some thoughts or concerns I have about the project:
   display the features instead of an alert message! I will
   also need to fix the "All" button onClick, where it
   currently displays nothing
+
+### Week 11:
+
+- This week, I first wanted to fix the button filtering for
+  Pokemon points. Toggling points was a bit funky with
+  displaying points and then when "All" was clicked, nothing
+  would show unless clicked again. I tried
+  `selectedType = type === 'All' ? null : type;` to set
+  selectedType to null if the "All" button is clicked,
+  meaning no filter will be applied.
+- Added a legend! Professor Kelleher's
+  [video](https://www.youtube.com/watch?v=4ogc4s2k1MQ&list=PL9yYRbwpkykthTFJl9vYr_C0FCjRIn_7G&index=34)
+  on this was particularly helpful.
+- Added a label displaying Pokémon attributes when clicked
+  on! While this needs to be modified to make it look a bit
+  better, it's functional (a big win for me). I implemented
+  this by creating a setSelectedPokemon(pokemon) function,
+  in hue-and-size.js, which essentially stores the selected
+  Pokémon within the ``selectedPokemon` variable, and grabs
+  its details with a document.querySelector. So ultimately,
+  it's a bit of DOM and event handling to send information
+  from the csv to the front end.
+  ![week 11 progress](https://github.com/jacobchlebowski/data-visualization-573/blob/main/FINAL%20PROJECT/images/week%2011%20completion.jpg?raw=true)
+- Next week, I hope to fix the legend first, and then start
+  on something unique. Perhaps the mouse follower I was
+  talking about. Another issue I would really like to focus
+  on is the hot reloading since that's a bit funky. Finally,
+  I'd like to see if I can make this more dynamic. Not sure
+  what I want to do for that yet, but I'll brainstorm this
+  week and see what I might be able to come up with.
