@@ -4,6 +4,7 @@
 
 - [Week 9](https://vizhub.com/jacobchlebowski/data-visualization-project-week-9)
 - [Week 10](https://vizhub.com/jacobchlebowski/data-visualization-project-week-10)
+- [Week 11](https://vizhub.com/jacobchlebowski/data-visualization-project-week-11)
 
 ## Data
 
