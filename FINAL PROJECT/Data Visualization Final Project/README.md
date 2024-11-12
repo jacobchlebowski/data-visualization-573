@@ -5,6 +5,7 @@
 - [Week 9](https://vizhub.com/jacobchlebowski/data-visualization-project-week-9)
 - [Week 10](https://vizhub.com/jacobchlebowski/data-visualization-project-week-10)
 - [Week 11](https://vizhub.com/jacobchlebowski/data-visualization-project-week-11)
+- [Week 12](https://vizhub.com/jacobchlebowski/1data-visualization-project-week-12)
 
 ## Data
 
@@ -216,3 +217,21 @@ Some thoughts or concerns I have about the project:
   I'd like to see if I can make this more dynamic. Not sure
   what I want to do for that yet, but I'll brainstorm this
   week and see what I might be able to come up with.
+
+### Week 12:
+
+- This week, I started by fixing hot reloading. This
+  required going back to some older videos. This imrpvoed
+  the coding process and overall efficiency of the program
+  since the graph wasn't being redrawn everytime.
+- Next, I studied the week 12 module for an **interactive**
+  viz. For now, I incorporated a **hover** implementation
+  over the legend, which tells us how many Pokemon are
+  within each type.
+- Finally, I did some code cleanup. Next week I'm going to
+  fix the positioning of the labels again. I was also
+  considering changing the hover functionality so that it's
+  for the points on the graph, but I also just like the
+  onClick feature displaying more data/info as well. Not
+  sure what I'll do yet.
+  ![week 12 progress](https://github.com/jacobchlebowski/data-visualization-573/blob/main/FINAL%20PROJECT/images/week%2012%20progress.png?raw=true)

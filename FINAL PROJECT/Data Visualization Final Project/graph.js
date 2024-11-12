@@ -37,7 +37,7 @@ export const createAxes = (svg) => {
 
   svg
     .append('text')
-    .attr('x', centeredX + width / 2 - margin.right + 60)
+    .attr('x', centeredX + width / 2 - margin.right + 65)
     .attr('y', centeredY + 20)
     .style('text-anchor', 'middle')
     .text('Fast');

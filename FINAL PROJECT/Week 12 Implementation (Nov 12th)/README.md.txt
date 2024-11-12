@@ -5,6 +5,7 @@
 - [Week 9](https://vizhub.com/jacobchlebowski/data-visualization-project-week-9)
 - [Week 10](https://vizhub.com/jacobchlebowski/data-visualization-project-week-10)
 - [Week 11](https://vizhub.com/jacobchlebowski/data-visualization-project-week-11)
+- [Week 12](https://vizhub.com/jacobchlebowski/1data-visualization-project-week-12)
 
 ## Data
 
@@ -233,4 +234,4 @@ Some thoughts or concerns I have about the project:
   for the points on the graph, but I also just like the
   onClick feature displaying more data/info as well. Not
   sure what I'll do yet.
-  ![week 12 progress]()
+  ![week 12 progress](https://github.com/jacobchlebowski/data-visualization-573/blob/main/FINAL%20PROJECT/images/week%2012%20progress.png?raw=true)
