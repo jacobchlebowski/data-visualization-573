@@ -1,47 +1,127 @@
+/* Container for the graph and filters */
+.container {
+  position: relative;
+  width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff; /* Bright white for contrast */
+  padding: 30px;
+  border: 2px solid #ddd; /* Subtle border for structure */
+  border-radius: 12px; /* Rounded edges for a modern look */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Softer shadow for depth */
+}
+
+/* Title styling */
+.title {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem; /* Larger font for prominence */
+  font-weight: bold;
+  color: #333333; /* Neutral dark gray */
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow for better readability */
+}
+
+/* Filter container styling */
 .filter-container {
   position: absolute;
-  top: 90px;
-  left: 800px;
+  top: 237px;
+  left: 830px; /* Adjust for better layout spacing */
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px; /* Larger gap between buttons */
 }
 
+/* Filter button styling */
 .filter-button {
-  padding: 10px 15px;
+  padding: 12px 20px; /* Increased padding for better clickability */
   cursor: pointer;
-  border: 1px solid #888;
-  background-color: #f0f0f0;
-  border-radius: 5px;
+  border: 1px solid #aaa; /* Lighter border for cleaner look */
+  background-color: #f8f8f8; /* Softer neutral background */
+  border-radius: 8px; /* Rounded edges for a modern feel */
   transition:
-    background-color 0.2s,
-    transform 0.1s;
+    background-color 0.3s ease,
+    transform 0.15s ease; /* Smoother animations */
   font-weight: bold;
-  font-size: 1rem;
-  color: #333;
+  font-size: 1.1rem; /* Slightly larger font for readability */
+  color: #444; /* Slightly darker text */
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
+/* Hover effect for filter buttons */
 .filter-button:hover {
-  background-color: #e0e0e0;
-  transform: scale(1.05);
+  background-color: #e8e8e8; /* Light hover effect */
+  transform: scale(1.07); /* Slightly larger on hover */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Elevated shadow on hover */
 }
 
+/* Active effect for filter buttons */
 .filter-button:active {
-  background-color: #ccc;
-  transform: scale(0.98);
+  background-color: #dcdcdc; /* Darker background when clicked */
+  transform: scale(0.95); /* Slightly shrink when clicked */
 }
 
-/* Make the "ALL" button stand out */
+/* Highlight the "ALL" button with unique styling */
 .filter-button[data-type='ALL'] {
-  background-color: #4caf50;
-  color: #fff;
-  border-color: #388e3c;
+  background-color: #4caf50; /* Green for distinction */
+  color: #ffffff; /* White text for contrast */
+  border-color: #3e8e41; /* Darker border */
+  box-shadow: 0px 3px 6px rgba(0, 128, 0, 0.3); /* Green-tinted shadow */
 }
 
+/* Hover effect for "ALL" button */
 .filter-button[data-type='ALL']:hover {
-  background-color: #43a047;
+  background-color: #45a049; /* Slightly brighter green */
 }
 
+/* Active effect for "ALL" button */
 .filter-button[data-type='ALL']:active {
-  background-color: #388e3c;
+  background-color: #388e3c; /* Darker green */
+}
+
+/* Tooltip styling */
+#tooltip {
+  position: absolute;
+  padding: 10px;
+  background-color: #ffffff; /* White background */
+  color: #333; /* Dark text for contrast */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  pointer-events: none; /* Prevent interference with cursor */
+  display: none; /* Hidden by default */
+  font-size: 0.9rem;
+  z-index: 1000;
+}
+
+/* Pokémon details styling */
+.pokemon-details {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #ffffff; /* White background */
+  border: 1px solid #ddd; /* Light gray border for clean design */
+  border-radius: 10px; /* Rounded edges */
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  color: #333; /* Neutral text color */
+  font-size: 1rem;
+  min-height: 150px; /* Fixed minimum height to ensure consistent size */
+  max-height: 150px; /* Ensure the box does not grow too large */
+  overflow-y: auto; /* Add scrollbar if content overflows */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+}
+
+/* Highlight text within Pokémon details */
+.pokemon-details p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.pokemon-details h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 10px;
 }

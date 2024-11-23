@@ -130,6 +130,13 @@ const createLegend = (svg) => {
 };
 
 export const main = (container) => {
+  if (!document.querySelector('.title')) {
+    const title = document.createElement('h1');
+    title.className = 'title';
+    title.textContent =
+      'Pokémon Speed vs Attack/Defense Scatterplot Visualization';
+    container.appendChild(title);
+  }
   let svg = select(container).select('#scatterplot-svg');
   if (svg.empty()) {
     svg = select(container)
@@ -138,7 +145,7 @@ export const main = (container) => {
       .attr('width', width + margin.left + margin.right)
       .attr('height', height + margin.top + margin.bottom)
       .style('position', 'absolute')
-      .style('top', `${margin.top}px`)
+      .style('top', `${margin.top + 185}px`)
       .style('left', `${margin.left}px`);
 
     svg
@@ -188,7 +195,7 @@ export const main = (container) => {
     const detailsContainer = document.createElement('div');
     detailsContainer.className = 'pokemon-details';
     detailsContainer.innerHTML =
-      '<p>Click on a point to display the Pokémon.</p>';
+      '<p>Click on a point to <br> display the Pokémon.</p>';
     container.appendChild(detailsContainer);
   }
 

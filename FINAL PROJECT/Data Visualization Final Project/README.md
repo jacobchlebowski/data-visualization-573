@@ -7,6 +7,7 @@
 - [Week 11](https://vizhub.com/jacobchlebowski/data-visualization-project-week-11)
 - [Week 12](https://vizhub.com/jacobchlebowski/1data-visualization-project-week-12)
 - [Week 13](https://vizhub.com/jacobchlebowski/data-visualization-project-week-13)
+- [Week 14 FINISHED PRODUCT](https://vizhub.com/jacobchlebowski/data-visualization-project-week-14)
 
 ## Data
 
@@ -251,3 +252,43 @@ Some thoughts or concerns I have about the project:
   ![Week 13 progress1](https://github.com/jacobchlebowski/data-visualization-573/blob/main/FINAL%20PROJECT/images/week%2013%20progress%5B1%5D.png?raw=true)
 
   ![Week 13 progress2](https://github.com/jacobchlebowski/data-visualization-573/blob/main/FINAL%20PROJECT/images/week%2013%20progress%5B2%5D.png?raw=true)
+
+### Week 14:
+
+- Updated README to read like a report.
+- Added a title
+- Cleaned up more code for hot-reloading
+- Made the DataViz a bit more appealing and positioning
+  upgrades
+
+  ![Week 14 progrss](https://github.com/jacobchlebowski/data-visualization-573/blob/main/FINAL%20PROJECT/images/week%2014%20progress.png?raw=true)
+
+## Description of Finished Product and Future Work:
+
+- I'm very proud to share this product that I've envisioned
+  during the first month of this course. Since encountering
+  this dataset, I wasn't entirely sure how I would reach my
+  goals. By breaking down the larger goals into smaller
+  ones, it allowed me to make more meaningful progress,
+  recognize errors, and even discover new avenues to improve
+  the visualization as a whole.
+- **Description:** This visualization is for both gamers and
+  game developers alike (particularly those interested in
+  Pokemon). The scatterplot shows the distribution among
+  Pokemon and their base stats as well as their type,
+  attack/defense, speed, and even the volume of Pokemon that
+  are similar. Upon clicking a point on the graph, it shows
+  all of the stats for that Pokemon. The end-user may also
+  filter which Pokemon are on the scatterplot at a given
+  time if they so choose. For example, if Pokemon gamer
+  wishes to add a "Fast Psychic" to their Pokemon
+  collection, this scatterplot makes it really simple to
+  view those potential options.
+- **Future Work:** Of course, there's always room for future
+  work to be done on this visualization. Some ideas I had
+  include a dynmaic attribute selection, which allows users
+  to choose which attributes (Speed, HP, Attack, etc. to
+  plot on the X,Y axes for flexibility). Another idea I had
+  was a 3D graph, a more advanced visualization that
+  represents another attribute of data such as a special
+  attack.

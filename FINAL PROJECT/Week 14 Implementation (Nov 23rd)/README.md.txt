@@ -253,7 +253,7 @@ Some thoughts or concerns I have about the project:
 
   ![Week 13 progress2](https://github.com/jacobchlebowski/data-visualization-573/blob/main/FINAL%20PROJECT/images/week%2013%20progress%5B2%5D.png?raw=true)
 
-### Week 14 (FINISHED PRODUCT & FUTURE WORK):
+### Week 14:
 
 - Updated README to read like a report.
 - Added a title
@@ -261,7 +261,9 @@ Some thoughts or concerns I have about the project:
 - Made the DataViz a bit more appealing and positioning
   upgrades
 
-## Description and Future Work:
+  ![Week 14 progrss](https://github.com/jacobchlebowski/data-visualization-573/blob/main/FINAL%20PROJECT/images/week%2014%20progress.png?raw=true)
+
+## Description of Finished Product and Future Work:
 
 - I'm very proud to share this product that I've envisioned
   during the first month of this course. Since encountering
